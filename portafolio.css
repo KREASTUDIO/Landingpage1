@@ -1,0 +1,203 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* FONDO GENERAL */
+body {
+  background-color: #000000; /* gris claro */
+  color: #d8d8d8;
+}
+
+
+
+
+.portfolio-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #f2f2f2;
+  z-index: 100;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.portfolio-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.portfolio-nav a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.portfolio-nav a:hover {
+  color: #c8c8c8; /* dorado */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECCIÓN GENERAL */
+.portfolio-section {
+  padding: 80px 10px;
+  text-align: center;
+}
+
+/* TÍTULOS */
+.portfolio-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #ffffff; /* dorado elegante */
+}
+
+/* CONTENEDOR DE IMÁGENES */
+.portfolio-image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff; /* fondo blanco para fotos */
+  padding: 40px 20px;
+  border-radius: 0px;
+  gap: 30px;
+}
+
+/* IMÁGENES */
+.portfolio-image-container img {
+  max-width: 100%;
+  width: 900px;
+  height: auto;
+  border-radius: 0px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* MODAL / LIGHTBOX */
+.lightbox {
+  position: fixed;
+  inset: 0; /* top:0; left:0; right:0; bottom:0 */
+  background-color: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  width: 1050px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+/* CERRAR BOTÓN */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+  transition: opacity 0.3s;
+}
+
+.lightbox-close:hover {
+  opacity: 0.6;
+}
+
+
+
+/* VIDEO */
+.portfolio-video-container {
+  background-color: #fff; /* fondo blanco para video */
+  display: flex;
+  justify-content: center;
+  padding: 20px 20px;
+  border-radius: 0px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .portfolio-title {
+    font-size: 36px;
+  }
+
+  .portfolio-image-container img {
+    max-width: 95%;
+  }
+
+  .portfolio-video-container iframe {
+    width: 95%;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-title {
+    font-size: 32px;
+  }
+
+  .portfolio-image-container img {
+    max-width: 100%;
+  }
+
+  .portfolio-video-container iframe {
+    width: 100%;
+    height: auto;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
